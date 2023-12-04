@@ -1,0 +1,26 @@
+.Nav-header {
+  box-shadow: rgba(38, 126, 118, 0.74) 127px 34px 66px -42px inset;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+.links-ul li a {
+  text-decoration: none;
+  color: var(--pramerey-color);
+}
+
+.links-ul li a:hover {
+  color: var(--cecandery-color);
+}
