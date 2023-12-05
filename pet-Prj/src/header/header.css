@@ -1,6 +1,102 @@
+/* =========================================
+    FOlder for CSS
+   =========================================
+   
+   -1- header  component header
+
+   -2- booten  componebt Botten
+
+   -3- 
+ */
+
+/*  -1- header  component header   */
 .Nav-header {
   box-shadow: rgba(38, 126, 118, 0.74) 127px 34px 66px -42px inset;
 }
+
+.links-ul li a {
+  color: var(--pramerey-color);
+}
+
+.links-ul li a:hover {
+  color: var(--cecandery-color);
+}
+
+/*  -2- booten  componebt Botten */
+.bott-Nav {
+  box-shadow: none !important ;
+  color: var(--pramerey-color) !important;
+  border: 1px solid var(--pramerey-color) !important;
+}
+
+.bott-Nav:focus {
+  border: 1px solid var(--cecandery-color) !important;
+}
+
+.Naveclobs {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0c2b2850;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 22;
+}
+.Naveclobs .yi {
+  transform: translate(-20%, -20%);
+  position: fixed;
+  z-index: 100;
+  top: 20%;
+  right: 0%;
+  background-color: white;
+  box-shadow: 0px 8px 20px -10px #ff9900;
+  width: 60%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.Naveclobs .yi ul {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  margin-left: 0%;
+}
+
+.Naveclobs .yi ul .ll {
+  all: initial;
+  padding: 20px;
+}
+
+.Naveclobs .yi ul li {
+  color: #267e76;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 10px 10px 0px;
+  position: relative;
+}
+
+.Naveclobs .yi ul li a {
+  color: #267e76;
+  /* background-color: #267e76; */
+}
+.Naveclobs .yi ul li a:hover {
+  color: #ff9900;
+}
+.Naveclobs .yi ul li:hover:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: -6%;
+  width: 106%;
+  height: 100%;
+  transition: 0.5s;
+  background-color: #267e7765;
+  color: #ff9900;
+  z-index: -2;
+  box-shadow: 0px 2px 20px -1px #ff9900;
+}
+
+/* medei for header */
 
 @media (max-width: 768px) {
   .links {
@@ -15,12 +111,4 @@
   .navbar-toggler {
     display: none;
   }
-}
-.links-ul li a {
-  text-decoration: none;
-  color: var(--pramerey-color);
-}
-
-.links-ul li a:hover {
-  color: var(--cecandery-color);
 }

@@ -1,6 +1,7 @@
 import "../header/header.css";
 import Botton from "./Botton";
-import Links from "./Links";
+// import Links from "./Links";
+import UL from "./UL";
 
 export default function Header() {
   return (
@@ -9,29 +10,13 @@ export default function Header() {
         <div className=" d-flex  justify-content-between">
           <img style={{ width: "80px" }} src="/public/loge1.png" alt="" />
         </div>
+
         <div className=" links mt-2 me-3 ">
           <ul className="links-ul  d-flex justify-content-between align-items-center">
-            <Links>
-              <a href="">all</a>
-            </Links>
-
-            <Links>
-              <a href="">cats</a>
-            </Links>
-
-            <Links>
-              <a href="">dogs</a>
-            </Links>
-
-            <Links>
-              <a href="">fish</a>
-            </Links>
-
-            <Links>
-              <a href="">snicks</a>
-            </Links>
+            <UL />
           </ul>
         </div>
+
         <Botton />
       </nav>
     </div>

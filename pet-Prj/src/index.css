@@ -13,3 +13,9 @@ body {
   --pramerey-color: #267e76;
   --cecandery-color: #ff9900;
 }
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
