@@ -5,8 +5,6 @@
   -moz-box-sizing: border-box;
 }
 body {
-  width: 100vw;
-  height: 100vh;
   font-family: "Roboto", sans-serif;
 }
 :root {
@@ -18,4 +16,21 @@ a {
 }
 li {
   list-style: none;
+}
+
+.conteiner {
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+}
+@media (max-width: 580px) {
+  .conteiner {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 967px) {
+  .conteiner {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
 }

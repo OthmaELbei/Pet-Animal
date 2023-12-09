@@ -9,7 +9,7 @@ import { useState } from "react";
 import UL from "./UL";
 
 export default function Botton() {
-  const [none, setNone] = useState("");
+  const [none, setNone] = useState("none");
 
   function importFormeil() {
     setNone("block");
@@ -21,6 +21,7 @@ export default function Botton() {
         onClick={importFormeil}
         className="bott-Nav navbar-toggler   "
         type="button"
+        style={{ marginRight: "20px" }}
       >
         <DehazeIcon />
       </button>
