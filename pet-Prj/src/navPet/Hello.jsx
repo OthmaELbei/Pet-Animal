@@ -1,11 +1,10 @@
 import Header from "../header/Header";
-
 import LinkesNave from "./LinkesNave";
-
 import "./nav.css";
 import TitelEmail from "./TitelEmail";
 import MainEmailNav from "./MainEmailNav";
 import FormlaerEmail from "./FormlaerEmail";
+import Swiber from "../swiber/Swiber";
 
 export default function Hello() {
   return (
@@ -22,6 +21,7 @@ export default function Hello() {
           <FormlaerEmail />
         </div>
       </div>
+      <Swiber />
     </>
   );
 }
