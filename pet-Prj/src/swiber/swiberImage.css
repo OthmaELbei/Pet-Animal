@@ -54,11 +54,9 @@ folder css swibber for Image Animl  for all Pj
   .swippr {
     padding-top: 60px !important;
     padding-bottom: 60px !important;
-    /* background-color: aqua; */
   }
 
   .swippr .swip-Img {
-    /* margin: 0; */
     padding-right: 10px !important;
     padding-left: 10px !important;
     width: 100%;

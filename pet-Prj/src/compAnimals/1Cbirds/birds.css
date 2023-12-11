@@ -1,0 +1,73 @@
+.Swiper-birds {
+  background-image: url("/public/back-birds.jpg");
+  background-size: cover;
+  padding-top: 200px !important;
+  padding-bottom: 200px !important;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.Swiper-birds::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #267e7768;
+}
+.swiper-button-prev::after {
+  color: #ff9900 !important;
+}
+.swiper-button-next::after {
+  color: #ff9900 !important;
+}
+.swiper-pagination-progressbar-fill {
+  background-color: #ff9900 !important;
+}
+
+/* bird canare */
+.Canare {
+  width: 80%;
+  margin: auto auto;
+  height: 400px;
+  background-color: #267e77e8;
+  padding: 40px;
+  height: 500px;
+}
+.Canare .child-canar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff9900;
+  height: 190px !important;
+  cursor: pointer;
+}
+.Canare .child-canar-Div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../public/fish-5.jpg");
+  background-size: cover;
+  height: 190px !important;
+  position: relative;
+  cursor: pointer;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.Canare .activ {
+  transform: rotateY(180deg);
+}
+.Canare .child-canar-Div .other-face {
+  background-color: wheat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 8px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  z-index: 27777;
+  padding: 20px;
+}
