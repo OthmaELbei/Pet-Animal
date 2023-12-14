@@ -8,6 +8,9 @@ import "../.././compAnimals/1Cbirds/birds.css";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 import BirdCanry from "./BirdCanry";
+import BirdKalobsat from "./kalobsat/BirdKalobsat";
+import BirdMondran from "./Mondran/BirdMondran";
+import BirdLisanasBarble from "./LesansBarable/BirdLisanasBarble";
 
 export default function Birds() {
   return (
@@ -23,14 +26,15 @@ export default function Birds() {
         <SwiperSlide>
           <BirdCanry />
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          <BirdKalobsat />
+        </SwiperSlide>
+        <SwiperSlide>
+          <BirdMondran />
+        </SwiperSlide>
+        <SwiperSlide>
+          <BirdLisanasBarble />
+        </SwiperSlide>
       </Swiper>
     </>
   );

@@ -31,9 +31,10 @@
   width: 80%;
   margin: auto auto;
   height: 400px;
-  background-color: #267e77e8;
-  padding: 40px;
+  background-color: #267e7787;
+  padding: 60px;
   height: 500px;
+  position: relative;
 }
 .Canare .child-canar {
   display: flex;
@@ -46,14 +47,14 @@
 .Canare .child-canar-Div {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-image: url("../../../public/fish-5.jpg");
+
   background-size: cover;
   height: 190px !important;
   position: relative;
   cursor: pointer;
   transition: transform 1s;
   transform-style: preserve-3d;
+  border-radius: 10px;
 }
 .Canare .activ {
   transform: rotateY(180deg);
@@ -70,4 +71,153 @@
   backface-visibility: hidden;
   z-index: 27777;
   padding: 20px;
+}
+.icon-loop {
+  position: absolute;
+  font-size: 1.3rem;
+  color: #ff9900;
+  top: 5px;
+  right: 5px;
+}
+
+.Canare .Buttfromila-canry {
+  position: fixed;
+  top: 10px;
+  left: 45%;
+  padding: 5px;
+  margin-bottom: 10px;
+  z-index: 20;
+  background-color: #ff9900d7;
+}
+.Canare .bak-formila-canare {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: wheat;
+  border: 3px #ff9900;
+  border-style: double;
+  z-index: 100;
+  padding: 20px;
+  overflow-y: scroll;
+  transition: 1s;
+}
+.Canare .bak-formila-canare.actv {
+  top: 0%;
+  transition: 0.5s;
+}
+.Canare .bak-formila-canare.actv .Buttfromila-canry {
+  background-color: #805f23;
+  color: wheat;
+}
+
+/* componenet ComTittle */
+
+.titl-formilar-Canery {
+  color: #9b9b9b;
+  max-width: fit-content;
+  box-shadow: 0px 11px 5px -9px rgb(240, 179, 66);
+  margin: 40px auto;
+}
+
+/* componenet IsecndTitle  */
+.I-titl-about-canary {
+  color: #805f23;
+  letter-spacing: 3px;
+}
+
+.Origin {
+  margin-top: 30px;
+}
+
+.Origin .titl-Origin {
+  color: rgb(255, 166, 1);
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  font-size: 20px;
+
+  text-transform: capitalize;
+}
+.Origin .P-origin-Canr {
+  color: #535050;
+  line-height: 2;
+  text-align: start;
+  margin-bottom: 40px;
+}
+.Origin a {
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  color: #3b3a3a;
+  background-color: rgb(240, 179, 66);
+  padding: 10px;
+  border-radius: 8px;
+}
+.seconed-title {
+  color: #505050;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 50px;
+  margin-top: 20px;
+  text-transform: capitalize;
+  position: relative;
+}
+.seconed-title::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 2px;
+  border-color: transparent transparent transparent #b47500;
+  border-width: 10px 10px 10px 10px;
+  border-style: solid;
+}
+.prag-fod-byb {
+  flex-basis: 65%;
+  line-height: 2;
+  color: #535050;
+}
+.img_fod {
+  display: flex;
+}
+.img_fod img {
+  flex-basis: 20%;
+  margin: 10px;
+  padding: 5px;
+  border: 4px #805f23 solid;
+  width: 100px;
+}
+.image-byb-canary img {
+  flex-basis: 20%;
+  margin: 10px;
+  padding: 5px;
+  border: 4px #805f23 solid;
+  width: 300px;
+}
+
+/* Medya aoutBird */
+@media (max-width: 576px) {
+  .about-eat-birds {
+    text-align: center;
+  }
+  .for-paby-fod {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 1126px) {
+  .for-paby-fod {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-byb-canary img {
+    width: 200%;
+  }
+  .image-byb-canary {
+    margin: 20px auto;
+  }
 }

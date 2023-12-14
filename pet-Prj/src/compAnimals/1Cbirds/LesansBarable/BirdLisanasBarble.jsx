@@ -5,14 +5,15 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import { Grid, Pagination } from "swiper/modules";
 import { v4 as uuidv4 } from "uuid";
-import FormilCanry from "./FormilCanry";
-import ButUpDawon from "./ButUpDawon";
+import ButUpDawon from "../ButUpDawon";
 
-const formilCanare = [
+import FormilaLisansbrabil from "./FormilaLisansbrabil";
+
+const formillisansBrbil = [
   {
     id: uuidv4(),
     transform: "",
-    backgroundimage: "url('../../../public/canr-1.jpg')",
+    backgroundimage: "url('/public/lesans-bird1.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed Arar",
     Namber: "+273678890",
@@ -24,7 +25,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform: "",
-    backgroundimage: "url('../../../public/canr-2.jpg')",
+    backgroundimage: "url('/public/lesans-bird1.webp')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+45678900",
@@ -36,7 +37,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform: "",
-    backgroundimage: "url('../../../public/canr-3.jpg')",
+    backgroundimage: "url('/public/lesans-bird2.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -48,7 +49,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform: "",
-    backgroundimage: "url('../../../public/canr-4.jpg')",
+    backgroundimage: "url('/public/lesans-bird3.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -60,7 +61,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-5.jpg')",
+    backgroundimage: "url('/public/lesans-bird4.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -72,7 +73,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-6.jpg')",
+    backgroundimage: "url('/public/lesans-bird5.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -84,7 +85,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-7.jpg')",
+    backgroundimage: "url('/public/lesans-bird6.webp')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -96,7 +97,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-8.jpg')",
+    backgroundimage: "url('/public/lesans-bird7.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -108,7 +109,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-9.jpg')",
+    backgroundimage: "url('/public/lesans-bird8.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -116,34 +117,9 @@ const formilCanare = [
     jender: "MALE",
     prex: "22£",
     City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('../../../public/canr-10.jpg')",
-    backgroundsize: "cover ",
-    AllName: "",
-    Namber: "",
-    Tayp: "",
-    jender: "",
-    prex: "",
-    City: "",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('../../../public/canr-11.jpg')",
-    backgroundsize: "cover ",
-    AllName: "",
-    Namber: "",
-    Tayp: "",
-    jender: "",
-    prex: "",
-    City: "",
   },
 ];
-
-export default function BirdCanary() {
+export default function BirdLisanasBarble() {
   const [activeItemId, setActiveItemId] = useState(null);
   const [topformil, setTopformil] = useState("");
 
@@ -189,14 +165,14 @@ export default function BirdCanary() {
           <div className={`bak-formila-canare  ${topformil}`}>
             <ButUpDawon
               onClick={clickUPformilCanary}
-              text=" ridin about canarey"
+              text=" ridin about Lisansibrabil"
             />
-            <FormilCanry />
+            <FormilaLisansbrabil />
           </div>
 
           <ButUpDawon onClick={clickUPformilCanary} />
 
-          {formilCanare.map((item) => (
+          {formillisansBrbil.map((item) => (
             <SwiperSlide key={item.id}>
               <div
                 style={{

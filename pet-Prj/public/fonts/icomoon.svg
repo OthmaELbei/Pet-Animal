@@ -7,6 +7,7 @@
 <font-face units-per-em="1024" ascent="960" descent="-64" />
 <missing-glyph horiz-adv-x="1024" />
 <glyph unicode="&#x20;" horiz-adv-x="512" d="" />
+<glyph unicode="&#xe900;" glyph-name="loop" d="M512 170.667v128l170-170-170-172v128q-140 0-241 101t-101 241q0 100 54 182l62-62q-30-54-30-120 0-106 75-181t181-75zM512 768.667q140 0 241-101t101-241q0-100-54-182l-62 62q30 54 30 120 0 106-75 181t-181 75v-128l-170 170 170 172v-128z" />
 <glyph unicode="&#xe901;" glyph-name="keyboard_arrow_up" d="M316 280.667l-60 60 256 256 256-256-60-60-196 196z" />
 <glyph unicode="&#xe902;" glyph-name="menu" d="M0 819.2h1024v-102.4h-1024v102.4zM0 512h1024v-102.4h-1024v102.4zM0 204.8h1024v-102.4h-1024v102.4z" />
 <glyph unicode="&#xe903;" glyph-name="arrow_forward" d="M512 768.667l342-342-342-342-60 60 238 240h-520v84h520l-238 240z" />

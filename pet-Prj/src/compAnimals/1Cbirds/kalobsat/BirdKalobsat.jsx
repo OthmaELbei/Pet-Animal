@@ -5,14 +5,14 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import { Grid, Pagination } from "swiper/modules";
 import { v4 as uuidv4 } from "uuid";
-import FormilCanry from "./FormilCanry";
-import ButUpDawon from "./ButUpDawon";
+import ButUpDawon from "../ButUpDawon";
+import FormilaKalobsat from "./FormilaKalobsat";
 
-const formilCanare = [
+const formilKalobsat = [
   {
     id: uuidv4(),
     transform: "",
-    backgroundimage: "url('../../../public/canr-1.jpg')",
+    backgroundimage: "url('../../../public/kalob-1.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed Arar",
     Namber: "+273678890",
@@ -24,7 +24,19 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform: "",
-    backgroundimage: "url('../../../public/canr-2.jpg')",
+    backgroundimage: "url('../../../public/kalob-2.jpg')",
+    backgroundsize: "cover ",
+    AllName: "ahmed Arar",
+    Namber: "+273678890",
+    Tayp: "CANR",
+    jender: "MALE",
+    prex: "22£",
+    City: "CASA",
+  },
+  {
+    id: uuidv4(),
+    transform: "",
+    backgroundimage: "url('../../../public/kalob-3.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+45678900",
@@ -36,7 +48,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform: "",
-    backgroundimage: "url('../../../public/canr-3.jpg')",
+    backgroundimage: "url('../../../public/kalob-4.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -48,7 +60,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform: "",
-    backgroundimage: "url('../../../public/canr-4.jpg')",
+    backgroundimage: "url('../../../public/kalob-5.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -60,7 +72,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-5.jpg')",
+    backgroundimage: "url('../../../public/kalob-6.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -72,7 +84,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-6.jpg')",
+    backgroundimage: "url('../../../public//kalob-7.jpg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -84,7 +96,7 @@ const formilCanare = [
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-7.jpg')",
+    backgroundimage: "url('../../../public/kalob-8.webp')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -93,10 +105,11 @@ const formilCanare = [
     prex: "22£",
     City: "CASA",
   },
+
   {
     id: uuidv4(),
     transform1: "",
-    backgroundimage: "url('../../../public/canr-8.jpg')",
+    backgroundimage: "url('../../../public/kalob-10.jpeg')",
     backgroundsize: "cover ",
     AllName: "ahmed taha",
     Namber: "+3234567890",
@@ -104,46 +117,10 @@ const formilCanare = [
     jender: "MALE",
     prex: "22£",
     City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('../../../public/canr-9.jpg')",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('../../../public/canr-10.jpg')",
-    backgroundsize: "cover ",
-    AllName: "",
-    Namber: "",
-    Tayp: "",
-    jender: "",
-    prex: "",
-    City: "",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('../../../public/canr-11.jpg')",
-    backgroundsize: "cover ",
-    AllName: "",
-    Namber: "",
-    Tayp: "",
-    jender: "",
-    prex: "",
-    City: "",
   },
 ];
 
-export default function BirdCanary() {
+export default function BirdKalobsat() {
   const [activeItemId, setActiveItemId] = useState(null);
   const [topformil, setTopformil] = useState("");
 
@@ -189,14 +166,14 @@ export default function BirdCanary() {
           <div className={`bak-formila-canare  ${topformil}`}>
             <ButUpDawon
               onClick={clickUPformilCanary}
-              text=" ridin about canarey"
+              text=" ridin about kalbosat"
             />
-            <FormilCanry />
+            <FormilaKalobsat />
           </div>
 
           <ButUpDawon onClick={clickUPformilCanary} />
 
-          {formilCanare.map((item) => (
+          {formilKalobsat.map((item) => (
             <SwiperSlide key={item.id}>
               <div
                 style={{
