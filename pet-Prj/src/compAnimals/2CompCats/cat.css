@@ -1,0 +1,76 @@
+/* Parent className Parent-Cats */
+.Parent-Cats {
+  background-image: url("/public/backgrond-cats\ \(2\).jpg");
+  background-size: cover;
+  padding-top: 160px;
+  padding-bottom: 60px;
+}
+
+/* back grond clasName back-content */
+.Parent-Cats .back-content {
+  z-index: 1;
+  background: radial-gradient(
+    circle at 80%,
+    #ec9c35dd,
+    #edbc80a3 25%,
+    #f9d3a59b 65%,
+    #ec9c35dd 16%,
+    #eb9d58a3 100%
+  );
+  background-color: #267e7746;
+}
+
+/* for Class .box-cat */
+.Parent-Cats .Pr-cats .Box-Cat {
+  height: 400px;
+  transform: scale(0.3, 0.3);
+  background-color: wheat;
+  z-index: -1;
+  border-radius: 10px;
+  transition: 0.6s;
+  margin-bottom: 100px;
+}
+
+.Parent-Cats .Pr-cats .Box-Cat .Imag-cat img {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 350px;
+  height: 350px;
+  border: 4px solid #b47500;
+  transform: scale(3, 3);
+  position: absolute;
+  z-index: 4;
+  top: 40px;
+  transition: 0.6s;
+}
+.Parent-Cats .Pr-cats .Box-Cat .Imag-cat img.activ {
+  transform: scale(0.6, 0.6);
+  top: -50px;
+  left: -50px;
+  transition: 0.6s;
+}
+.Parent-Cats .Pr-cats .Box-Cat.activ {
+  transform: scale(1, 1);
+  transition: 0.6s;
+}
+
+/* meida for md sm  */
+@media (min-width: 576px) {
+  .Parent-Cats .Pr-cats .Box-Cat {
+    height: 250px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .Parent-Cats .Pr-cats .Box-Cat {
+    height: 350px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .Parent-Cats .Pr-cats .Box-Cat {
+    height: 380px;
+  }
+}
