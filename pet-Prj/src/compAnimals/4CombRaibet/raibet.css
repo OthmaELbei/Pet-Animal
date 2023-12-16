@@ -7,15 +7,6 @@
   position: relative;
 }
 
-.Raypit {
-  position: absolute;
-  padding: 50px;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-
 .child-Raybit-Div .imag-raibit {
   position: relative;
   overflow: hidden;
@@ -39,6 +30,5 @@
 .child-Raybit-Div .imag-raibit img {
   width: 330px;
   height: 230px;
-
   border-radius: 10px;
 }
