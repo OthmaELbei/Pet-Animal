@@ -8,6 +8,7 @@ import Cats from "./compAnimals/2CompCats/Cats";
 import Dogs from "./compAnimals/3ComDogs/Dogs";
 import Raybet from "./compAnimals/4CombRaibet/Raybet";
 import Fishs from "./compAnimals/5ComFish/Fishs";
+import Foter from "./Footer/Foter";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Dogs />
       <Raybet />
       <Fishs />
+      <Foter />
     </>
   );
 }

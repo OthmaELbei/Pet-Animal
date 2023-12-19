@@ -4,6 +4,7 @@
   background-size: cover;
   padding-top: 160px;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 /* back grond clasName back-content */
@@ -73,4 +74,54 @@
   .Parent-Cats .Pr-cats .Box-Cat {
     height: 380px;
   }
+}
+
+/* For add icocon for formilar in cats */
+.Parent-Cats .icon-add_circle_outline {
+  font-size: 2rem;
+  color: #267e77;
+  position: absolute;
+  z-index: 11;
+  top: 10px;
+  left: 3%;
+}
+.Parent-Cats .formilar-addinCats {
+  font-size: 2rem;
+  background-color: #267e776b;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  transform: scale(0, 0);
+  transition: 1s;
+  top: 0px;
+  left: 0;
+}
+.Parent-Cats .formilar-addinCats.activ {
+  transform: scale3d(1, 1, 1);
+  transition: 1s;
+}
+
+.formilers {
+  width: 50%;
+  height: 60%;
+  margin: 100px auto;
+  background-color: #b47500b1;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 1px 0px 10px 2px black;
+}
+.formilers > div {
+  margin-bottom: 1rem;
+}
+.formilers > div > label {
+  padding-right: 30px;
+}
+.formilers > div > input {
+  all: unset;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.547);
+  border-bottom: 2px solid rgb(48, 48, 48);
 }

@@ -2,26 +2,31 @@
   background-image: url("/public/BackGraon-Fichs.webp");
   background-size: cover;
   margin: 0;
-  height: 100vh;
+  /* height: 100vh; */
+  padding-bottom: 300px;
+  padding-top: 500px;
   position: relative;
 }
 .child-Fish-Div .imag-fish {
+  padding-top: 100px;
   position: relative;
   overflow: hidden;
+  padding-bottom: 100px;
 }
 
 .child-Fish-Div .imag-fish > div {
   position: absolute;
   width: 0px;
   height: 0%;
-  top: 40%;
-  left: 33%;
+  top: 44.5%;
+  left: 33.5%;
   font-size: 30px;
   transform: translate(-40%, -40%);
   background-color: rgba(0, 255, 255, 0.651);
   border-radius: 10px;
   box-shadow: 0px -1px 6px 1px wheat inset;
-  color: transparent;
+
+  opacity: 0;
   transition: 0.6s;
 }
 .child-Fish-Div .imag-fish.activ > div {
@@ -30,6 +35,7 @@
   height: 230px;
   transition: 0.6s;
   color: #714400;
+  opacity: 1;
 }
 .child-Fish-Div .imag-fish img {
   width: 330px;

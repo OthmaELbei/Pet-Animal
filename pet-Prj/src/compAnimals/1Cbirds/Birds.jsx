@@ -11,6 +11,7 @@ import BirdCanry from "./BirdCanry";
 import BirdKalobsat from "./kalobsat/BirdKalobsat";
 import BirdMondran from "./Mondran/BirdMondran";
 import BirdLisanasBarble from "./LesansBarable/BirdLisanasBarble";
+import TitleAnimals from "../TitleAnimals";
 
 export default function Birds() {
   return (
@@ -23,6 +24,7 @@ export default function Birds() {
         modules={[Pagination, Navigation]}
         className="mySwiper Swiper-birds"
       >
+        <TitleAnimals title={"birds"} />
         <SwiperSlide>
           <BirdCanry />
         </SwiperSlide>

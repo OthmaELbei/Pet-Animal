@@ -1,15 +1,16 @@
 .Parent-Raibet {
   background-image: url("/public/BackGrandRabbit.jpg");
   background-size: cover;
-  margin: 0;
   padding-top: 300px;
-  padding-bottom: 300px;
+  padding-bottom: 500px;
   position: relative;
 }
 
 .child-Raybit-Div .imag-raibit {
+  margin-top: 100px;
   position: relative;
   overflow: hidden;
+  /* margin-bottom: 100px; */
 }
 
 .child-Raybit-Div .imag-raibit > div {

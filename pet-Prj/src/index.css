@@ -34,3 +34,35 @@ li {
     margin-right: 20px !important;
   }
 }
+
+.titAlls {
+  text-align: center;
+  color: transparent;
+  /* color: #8f0000; */
+  font-size: 70px;
+  letter-spacing: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 0px;
+  height: 70px;
+  transition: 0.5s;
+  font-weight: 800;
+  background-color: transparent;
+  transform: translateY(60%);
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  top: 0;
+  left: 50%;
+
+  text-transform: capitalize;
+  text-shadow: 10px 10px 3px #fbad04;
+}
+
+.titAlls:hover {
+  letter-spacing: 4px;
+
+  text-shadow: 10px 0px 6px #ff9b06;
+}

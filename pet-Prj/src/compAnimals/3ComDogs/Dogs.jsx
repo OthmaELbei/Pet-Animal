@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
+import TitleAnimals from "../TitleAnimals";
 
 const JsonDogs = [
   {
@@ -76,6 +77,7 @@ export default function Dogs() {
   return (
     <>
       <div className="parent-Dogs">
+        <TitleAnimals title={"Dogs"} />
         <Swiper
           slidesPerView={3}
           spaceBetween={30}

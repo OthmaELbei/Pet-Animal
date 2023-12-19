@@ -8,6 +8,7 @@ import "./raibet.css";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import TitleAnimals from "../TitleAnimals";
 
 const formilCanare = [
   {
@@ -119,6 +120,7 @@ export default function Raybet() {
   return (
     <>
       <div className="Parent-Raibet">
+        <TitleAnimals title={"Rabbits"} />
         <Swiper
           slidesPerView={3}
           grid={{

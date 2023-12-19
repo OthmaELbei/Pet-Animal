@@ -9,6 +9,7 @@ import "./fishs.css";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import TitleAnimals from "../TitleAnimals";
 
 const formilFishs = [
   {
@@ -110,6 +111,7 @@ export default function Fishs() {
   return (
     <>
       <div className="Par-fish">
+        <TitleAnimals title={"Fishs"} />
         <Swiper
           slidesPerView={3}
           grid={{

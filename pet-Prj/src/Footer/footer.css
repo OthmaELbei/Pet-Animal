@@ -1,0 +1,18 @@
+.footer {
+  padding-top: 50px;
+  box-shadow: rgba(38, 126, 118, 0.74) -105px -22px 95px -12px inset;
+}
+.title-Fotter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title-Fotter {
+  & h1 {
+    color: var(--cecandery-color);
+  }
+  & h5 {
+    color: var(--cecandery-color);
+  }
+}

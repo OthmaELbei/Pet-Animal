@@ -12,6 +12,8 @@ import "swiper/css/pagination";
 
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
+import TitleAnimals from "../TitleAnimals";
+import AddOpject from "./AddOpject";
 
 const JsonCats = [
   {
@@ -55,6 +57,7 @@ const JsonCats = [
     Age: " 4 month",
     telle: "+3456734567889",
     six: "Roussi",
+    // eslint-disable-next-line no-undef
     img: "/public/cat-7.jpg",
   },
 
@@ -64,13 +67,15 @@ const JsonCats = [
     Age: " 8 month",
     telle: "+3456734567889",
     six: "Kory",
+    // eslint-disable-next-line no-undef
     img: "/public/cat-8.jpg",
   },
 ];
 
 export default function Cats() {
   const [activeItemId, setActiveItemId] = useState(null);
-
+  const [todo, setTodo] = useState(JsonCats);
+  console.log(todo);
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
   };
@@ -79,6 +84,8 @@ export default function Cats() {
     <>
       <div className="Parent-Cats position-relative">
         <div className="back-content w-100 h-100 position-absolute  top-0 start-0" />
+        <TitleAnimals title={"Cats"} />
+        <AddOpject setTodo={setTodo} todo={todo} />
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
@@ -101,7 +108,7 @@ export default function Cats() {
             },
           }}
         >
-          {JsonCats.map((cat) => (
+          {todo.map((cat) => (
             <SwiperSlide
               onClick={() => handleItemClick(cat.id)}
               key={cat.id}
