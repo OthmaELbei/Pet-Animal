@@ -42,3 +42,87 @@
   height: 230px;
   border-radius: 10px;
 }
+/* For add icocon for formilar in cats */
+.Par-fish .icon-add_circle_outline {
+  font-size: 2rem;
+  color: #0b6e66;
+  position: absolute;
+  z-index: 11;
+  top: 40px;
+  left: 3%;
+}
+.Par-fish .formilar-addinCats {
+  font-size: 2rem;
+  background-color: #267e776b;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  transform: scale(0, 0);
+  transition: 1s;
+  top: 0px;
+  left: 0;
+}
+.Par-fish .formilar-addinCats.activ {
+  transform: scale3d(1, 1, 1);
+  transition: 1s;
+}
+.Par-fish .formilers-fish {
+  width: 70%;
+  margin: 100px auto;
+  background-color: #ffa805a1;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 1px 0px 10px 2px rgb(62, 62, 62);
+  padding: 20px;
+}
+.formilers-fish .icon-remove {
+  color: #267e77;
+  transition: 0.4s;
+}
+.formilers-fish .icon-remove:hover {
+  color: red;
+  transform: rotateX(180deg);
+}
+.formilers-fish > div {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.formilers-fish > input {
+  all: unset;
+  color: #267e77;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px 20px !important;
+  background-color: #ffffff54 !important;
+  border-bottom: 2px solid #267e77;
+  width: 90%;
+  margin: 10px auto !important;
+}
+.formilers-fish button {
+  all: unset;
+  padding: 5px 10px;
+  background-color: #267e77;
+  color: #674302;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+
+  width: 40%;
+  /* flex-basis: 46%; */
+  text-align: center;
+}
+@media (max-width: 666px) {
+  .Par-fish .formilers-fish {
+    width: 90% !important;
+    margin: 50px auto;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 1px 0px 10px 2px rgb(133, 227, 204);
+    padding: 10px 30px;
+  }
+  .formilers-fish button {
+    width: 35%;
+  }
+}

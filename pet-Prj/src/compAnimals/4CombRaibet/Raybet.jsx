@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Pagination } from "swiper/modules";
-import { v4 as uuidv4 } from "uuid";
 
 // import for Css
 import "./raibet.css";
@@ -9,109 +8,13 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import TitleAnimals from "../TitleAnimals";
+import AddForRabbit from "./AddForRabbit";
 
-const formilCanare = [
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/Raibet-10.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/Raibet-9.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/Raibet-8.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/Raibet-7.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/Raibet-6.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/Raibit-5.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-
-    backgroundimage: "/public/rabit-6.jpg",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-
-    backgroundimage: "/public/rabit-7.jpg",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Age: "2 month",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-
-    backgroundimage: "/public/rabit-8.jpg",
-    backgroundsize: "cover ",
-    AllName: "",
-    Namber: "",
-    Tayp: "",
-    jender: "",
-    prex: "",
-    City: "",
-  },
-];
+const formilRaibit = [];
 
 export default function Raybet() {
   const [activeItemId, setActiveItemId] = useState(null);
+  const [todoRib, setTodoRib] = useState(formilRaibit);
 
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
@@ -121,6 +24,7 @@ export default function Raybet() {
     <>
       <div className="Parent-Raibet">
         <TitleAnimals title={"Rabbits"} />
+        <AddForRabbit todoRib={todoRib} setTodoRib={setTodoRib} />
         <Swiper
           slidesPerView={3}
           grid={{
@@ -145,7 +49,7 @@ export default function Raybet() {
             },
           }}
         >
-          {formilCanare.map((item) => (
+          {todoRib.map((item) => (
             <SwiperSlide key={item.id}>
               <div id={item.id} className={`child-Raybit-Div `}>
                 <div
@@ -154,7 +58,7 @@ export default function Raybet() {
                     activeItemId === item.id ? "activ" : ""
                   }`}
                 >
-                  <img src={item.backgroundimage} alt="" />
+                  <img src={item.img} alt="" />
 
                   <div>
                     <ul>

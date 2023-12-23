@@ -66,3 +66,59 @@ li {
 
   text-shadow: 10px 0px 6px #ff9b06;
 }
+
+.icon {
+  position: fixed;
+  font-size: 30px;
+  color: #ff9900;
+  top: 15%;
+  right: 0px;
+  z-index: 299;
+  background-color: #267e774d;
+  padding: 10px;
+  border-radius: 50% 0 0 50%;
+}
+.icon::after {
+  content: "";
+  position: absolute;
+  width: 106%;
+  height: 50%;
+  top: -25px;
+  left: 4px;
+  background-color: TRANSPARENT;
+  border-radius: 137px 0 137px 0;
+  box-shadow: 24px 4px 0px -4px #267e764d;
+}
+.icon::before {
+  content: "";
+  position: absolute;
+  width: 106%;
+  height: 50%;
+  top: 51px;
+  left: -3px;
+  background-color: TRANSPARENT;
+  border-radius: 137px 137px 0;
+  box-shadow: 21px -4px 0px -3px #267e764d;
+}
+.stity {
+  position: fixed;
+  right: 0;
+  top: 10%;
+  width: 0%;
+  height: 100vh;
+  background-color: rgba(245, 222, 179, 0.893);
+  transition: 0.4s;
+  z-index: 200;
+  padding: 60px 0px;
+}
+.stity.activ {
+  width: 20%;
+  transition: 0.4s;
+}
+.stity h6 {
+  z-index: 0987654;
+  color: rgb(122, 122, 122);
+  margin-bottom: 10px;
+  top: 100px;
+  padding: 0 20px;
+}

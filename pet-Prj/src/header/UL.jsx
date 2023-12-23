@@ -1,28 +1,39 @@
 // import React from "react";s
 
+import { Link } from "react-router-dom";
 import Links from "./Links";
 
 export default function UL() {
   return (
     <>
       <Links>
-        <a href="">cats</a>
+        <Link to={"/"}>
+          <a href="">all</a>
+        </Link>
       </Links>
 
       <Links>
-        <a href="">cats</a>
+        <Link to={"/catPaje"}>
+          <a href="">cats</a>
+        </Link>
       </Links>
 
       <Links>
-        <a href="">dogs</a>
+        <Link to={"/dogpaje"}>
+          <a href="">dogs</a>
+        </Link>
       </Links>
 
       <Links>
-        <a href="">fish</a>
+        <Link to={"/rabbiytPaj"}>
+          <a href="">Rappit</a>
+        </Link>
       </Links>
 
       <Links>
-        <a href="">snicks</a>
+        <Link to={"/fishPaje"}>
+          <a href="">Fishs</a>
+        </Link>
       </Links>
     </>
   );

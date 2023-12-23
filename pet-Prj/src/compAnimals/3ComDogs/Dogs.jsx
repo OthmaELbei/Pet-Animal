@@ -14,6 +14,8 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 import TitleAnimals from "../TitleAnimals";
 
+import AddOpjDogs from "./AddOpjDogs";
+
 const JsonDogs = [
   {
     id: uuidv4(),
@@ -67,9 +69,18 @@ const JsonDogs = [
     six: "Kory",
     img: "/public/dog-6.jpg",
   },
+  {
+    id: uuidv4(),
+    person: "Moussa Mahmod",
+    Age: " 8 month",
+    telle: "+3456734567889",
+    six: "Kory",
+    img: "/public/dog-6.jpg",
+  },
 ];
 export default function Dogs() {
   const [activeItemId, setActiveItemId] = useState(null);
+  const [tododogs, setTododogs] = useState(JsonDogs);
 
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
@@ -78,6 +89,7 @@ export default function Dogs() {
     <>
       <div className="parent-Dogs">
         <TitleAnimals title={"Dogs"} />
+        <AddOpjDogs setTododogs={setTododogs} tododogs={tododogs} />
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
@@ -100,7 +112,7 @@ export default function Dogs() {
             },
           }}
         >
-          {JsonDogs.map((dog) => (
+          {tododogs.map((dog) => (
             <SwiperSlide
               onClick={() => handleItemClick(dog.id)}
               key={dog.id}

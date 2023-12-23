@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Pagination } from "swiper/modules";
-import { v4 as uuidv4 } from "uuid";
 
 // import for css
 
@@ -10,99 +9,14 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import TitleAnimals from "../TitleAnimals";
+import AddForFish from "./AddForFish";
 
-const formilFishs = [
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/fich-5.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/ima-fish1.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/fish-7.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/fich-6.png",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    backgroundimage: "/public/fish-4.jpg",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-
-    backgroundimage: "/public/fish-2.jpg",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-
-    backgroundimage: "/public/fich-5.jpg",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Age: "2 month",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-
-    backgroundimage: "/public/fich-3.jpg",
-    backgroundsize: "cover ",
-    AllName: "",
-    Namber: "",
-    Tayp: "",
-    jender: "",
-    prex: "",
-    City: "",
-  },
-];
+const formilFishs = [];
 
 export default function Fishs() {
   const [activeItemId, setActiveItemId] = useState(null);
+
+  const [todoFish, setTodofish] = useState(formilFishs);
 
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
@@ -112,6 +26,7 @@ export default function Fishs() {
     <>
       <div className="Par-fish">
         <TitleAnimals title={"Fishs"} />
+        <AddForFish todoFish={todoFish} setTodofish={setTodofish} />
         <Swiper
           slidesPerView={3}
           grid={{
@@ -136,7 +51,7 @@ export default function Fishs() {
             },
           }}
         >
-          {formilFishs.map((fish) => (
+          {todoFish.map((fish) => (
             <SwiperSlide key={fish.id}>
               <div id={fish.id} className={`child-Fish-Div `}>
                 <div
@@ -145,7 +60,7 @@ export default function Fishs() {
                     activeItemId === fish.id ? "activ" : ""
                   }`}
                 >
-                  <img src={fish.backgroundimage} alt="" />
+                  <img src={fish.img} alt="" />
 
                   <div>
                     <ul>

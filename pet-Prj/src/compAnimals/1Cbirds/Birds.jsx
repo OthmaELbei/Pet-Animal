@@ -7,7 +7,7 @@ import "../.././compAnimals/1Cbirds/birds.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
-import BirdCanry from "./BirdCanry";
+import BirdCanry from "./Canary/BirdCanry";
 import BirdKalobsat from "./kalobsat/BirdKalobsat";
 import BirdMondran from "./Mondran/BirdMondran";
 import BirdLisanasBarble from "./LesansBarable/BirdLisanasBarble";

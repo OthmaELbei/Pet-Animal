@@ -15,10 +15,6 @@ export default function LinkesNave() {
             all
           </button>
         </Link>
-
-        <button type="button" className="mx-2 btn bu-all ">
-          Success
-        </button>
       </div>
     </>
   );

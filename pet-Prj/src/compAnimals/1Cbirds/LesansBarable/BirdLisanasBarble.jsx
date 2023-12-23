@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "./lisanss.css";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
@@ -8,6 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 import ButUpDawon from "../ButUpDawon";
 
 import FormilaLisansbrabil from "./FormilaLisansbrabil";
+import Addopjlsansibrabil from "./Addopjlsansibrabil";
 
 const formillisansBrbil = [
   {
@@ -122,6 +124,7 @@ const formillisansBrbil = [
 export default function BirdLisanasBarble() {
   const [activeItemId, setActiveItemId] = useState(null);
   const [topformil, setTopformil] = useState("");
+  const [addLsans, setAddLsans] = useState(formillisansBrbil);
 
   function clickUPformilCanary() {
     if (topformil == "actv") {
@@ -137,7 +140,8 @@ export default function BirdLisanasBarble() {
 
   return (
     <>
-      <div>
+      <div className="paront-lsans">
+        <Addopjlsansibrabil setAddLsans={setAddLsans} addLsans={addLsans} />
         <Swiper
           slidesPerView={3}
           grid={{
@@ -172,12 +176,11 @@ export default function BirdLisanasBarble() {
 
           <ButUpDawon onClick={clickUPformilCanary} />
 
-          {formillisansBrbil.map((item) => (
+          {addLsans.map((item) => (
             <SwiperSlide key={item.id}>
               <div
                 style={{
-                  backgroundImage: item.backgroundimage,
-                  backgroundSize: item.backgroundsize,
+                  backgroundImage: `url(${item.img})`,
                 }}
                 id={item.id}
                 className={`child-canar-Div ${
@@ -188,15 +191,12 @@ export default function BirdLisanasBarble() {
                 <div className="icon-loop" />
 
                 <div className="other-face">
-                  <h6>{item.AllName}</h6>
-                  <h6>{item.Namber}</h6>
+                  <h6>{item.person}</h6>
+                  <h6>{item.telle}</h6>
                   <ul>
-                    <li>Teyp: {item.Tayp}</li>
-                    <li>Jander: {item.jender} </li>
-                    <li>Prex: {item.prex}</li>
-                    <li>City: {item.City}</li>
+                    <li>Teyp: {item.type}</li>
+                    <li>Age: {item.Age} </li>
                   </ul>
-
                   <div className="icon-loop" />
                 </div>
               </div>

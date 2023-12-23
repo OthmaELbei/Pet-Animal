@@ -2,21 +2,19 @@
 import { useState, useRef, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import BottnAdd from "../BottnAdd";
-
 // eslint-disable-next-line react/prop-types, no-unused-vars
-export default function AddOpject({ setTodo, todo }) {
+export default function AddOpjDogs({ setTododogs, tododogs }) {
   const [person, setPerson] = useState("");
   const [age, setAge] = useState("");
   const [title, setTille] = useState("");
   const [type, setType] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(""); // تحديث اسم الحالة لتكون 'image'
   const inputRef = useRef(null);
+
   const [addActv, setAddActv] = useState("");
 
-  // add for click Botton Actv
   function addActiv() {
     if (addActv === "") {
-      // استخدم === بدلاً من ==
       setAddActv("activ");
     } else {
       setAddActv("");
@@ -34,6 +32,7 @@ export default function AddOpject({ setTodo, todo }) {
 
   function addTodo() {
     const reader = new FileReader();
+
     reader.onloadend = () => {
       const newTodos = {
         id: uuidv4(),
@@ -43,9 +42,11 @@ export default function AddOpject({ setTodo, todo }) {
         type: type,
         img: reader.result,
       };
-      const updateTodos = [...todo, newTodos];
-      setTodo(updateTodos);
-      localStorage.setItem("todoCat", JSON.stringify(updateTodos));
+
+      const updateTodos = [...tododogs, newTodos];
+
+      setTododogs(updateTodos);
+      localStorage.setItem("todoDogs", JSON.stringify(updateTodos));
     };
 
     if (image) {
@@ -58,11 +59,11 @@ export default function AddOpject({ setTodo, todo }) {
     setImage("");
     setType("");
   }
-  // for useEffect
   useEffect(() => {
-    const storageTodos = JSON.parse(localStorage.getItem("todoCat")) ?? [];
-    setTodo(storageTodos);
+    const storageTodos = JSON.parse(localStorage.getItem("todoDogs")) ?? [];
+    setTododogs(storageTodos);
   }, []);
+  // eslint-disable-next-line no-undef
 
   return (
     <>
@@ -70,7 +71,7 @@ export default function AddOpject({ setTodo, todo }) {
         Add sell
       </div>
       <div className={`formilar-addinCats ${addActv} `}>
-        <div className="formilers-cats d-flex w-50 align-items-center justify-content-center">
+        <div className="formilers-dos d-flex w-50 align-items-center justify-content-center">
           <div onClick={addActiv} className="icon-remove"></div>
 
           <input

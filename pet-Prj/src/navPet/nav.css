@@ -69,16 +69,12 @@
   transform: rotate3d(20deg);
 }
 
-.main-email > div label {
-  color: var(--pramerey-color);
-}
-
-.main-email > div input {
+.main-email input {
   all: unset;
+  background-color: #e4fffd;
 }
-.main-email > div input:focus {
+.main-email input:focus {
   border: 1px solid rgb(255, 153, 0);
-  background-color: #267e77a2;
 }
 
 .bu-all {
@@ -129,27 +125,7 @@
     flex-direction: column;
   }
 }
-@media (max-width: 580px) {
-  .main-email {
-    padding: 0 0 20px 0 !important;
-    display: flex;
-    margin: 0 !important;
-  }
 
-  .main-email > div input {
-    margin-top: 0 !important;
-    justify-content: end;
-  }
-  .main-email > div label {
-    justify-content: start;
-  }
-  .main-email > div {
-    display: flex !important;
-    flex-direction: column !important ;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-}
 @media (max-width: 967px) {
   .main-email {
     padding: 10px;
@@ -159,7 +135,6 @@
 
   .main-email > div input {
     padding: 10px 30px !important;
-    width: 50%;
   }
   .main-email > div label {
     padding: 10px 30px !important;
@@ -169,4 +144,11 @@
     display: flex !important;
     flex-direction: row !important ;
   }
+}
+.sappmit {
+  background-color: #267e776e !important;
+  max-width: fit-content !important;
+  margin: 10px auto !important;
+  padding: 10px !important;
+  border-radius: 10px !important;
 }

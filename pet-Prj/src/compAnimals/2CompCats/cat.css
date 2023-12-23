@@ -3,7 +3,7 @@
   background-image: url("/public/backgrond-cats\ \(2\).jpg");
   background-size: cover;
   padding-top: 160px;
-  padding-bottom: 60px;
+  min-height: 600px;
   overflow: hidden;
 }
 
@@ -78,12 +78,13 @@
 
 /* For add icocon for formilar in cats */
 .Parent-Cats .icon-add_circle_outline {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #267e77;
   position: absolute;
   z-index: 11;
-  top: 10px;
+  top: 30px;
   left: 3%;
+  cursor: pointer;
 }
 .Parent-Cats .formilar-addinCats {
   font-size: 2rem;
@@ -93,35 +94,71 @@
   position: absolute;
   z-index: 100;
   transform: scale(0, 0);
-  transition: 1s;
+  transition: 0.6s;
   top: 0px;
   left: 0;
 }
 .Parent-Cats .formilar-addinCats.activ {
   transform: scale3d(1, 1, 1);
-  transition: 1s;
+  transition: 0.5s;
 }
 
-.formilers {
-  width: 50%;
-  height: 60%;
+.Parent-Cats .formilers-cats {
+  width: 70%;
   margin: 100px auto;
-  background-color: #b47500b1;
+  background-color: #ffa805a1;
   border-radius: 10px;
   flex-direction: column;
-  box-shadow: 1px 0px 10px 2px black;
+  box-shadow: 1px 0px 10px 2px rgb(62, 62, 62);
+  padding: 20px;
 }
-.formilers > div {
+.formilers-cats .icon-remove {
+  color: #267e77;
+  transition: 0.4s;
+}
+.formilers-cats .icon-remove:hover {
+  color: red;
+  transform: rotateX(180deg);
+}
+.formilers-cats > div {
   margin-bottom: 1rem;
+  width: 100%;
 }
-.formilers > div > label {
-  padding-right: 30px;
-}
-.formilers > div > input {
+
+.formilers-cats > input {
   all: unset;
-  color: white;
-  font-size: 18px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.547);
-  border-bottom: 2px solid rgb(48, 48, 48);
+  color: #267e77;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px 20px !important;
+  background-color: #ffffff54 !important;
+  border-bottom: 2px solid #267e77;
+  width: 90%;
+  margin: 10px auto !important;
+}
+.formilers-cats button {
+  all: unset;
+  padding: 5px 10px;
+  background-color: #267e77;
+  color: #674302;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+
+  width: 40%;
+  /* flex-basis: 46%; */
+  text-align: center;
+}
+@media (max-width: 666px) {
+  .Parent-Cats .formilers-cats {
+    width: 90% !important;
+    margin: 50px auto;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 1px 0px 10px 2px rgb(133, 227, 204);
+    padding: 10px 30px;
+  }
+  .formilers-cats button {
+    width: 35%;
+  }
 }

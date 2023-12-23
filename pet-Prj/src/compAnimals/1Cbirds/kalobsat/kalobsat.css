@@ -1,49 +1,14 @@
-.Parent-Raibet {
-  background-image: url("/public/BackGrandRabbit.jpg");
-  background-size: cover;
-  padding-top: 300px;
-  padding-bottom: 500px;
-  position: relative;
-}
+/* For add icocon for formilar in kalobsat */
 
-.child-Raybit-Div .imag-raibit {
-  margin-top: 100px;
-  position: relative;
-  overflow: hidden;
-  /* margin-bottom: 100px; */
-}
-
-.child-Raybit-Div .imag-raibit > div {
-  position: absolute;
-  width: 330px;
-  height: 60%;
-  top: 100%;
-  left: 0;
-  background-color: wheat;
-  border-radius: 10px;
-  box-shadow: 0px -1px 6px 1px wheat inset;
-  transition: 0.6s;
-}
-.child-Raybit-Div .imag-raibit.activ > div {
-  top: 40%;
-  transition: 0.6s;
-}
-.child-Raybit-Div .imag-raibit img {
-  width: 330px;
-  height: 230px;
-  border-radius: 10px;
-}
-
-/* For add icocon for formilar in cats */
-.Parent-Raibet .icon-add_circle_outline {
+.paront-kalobsat .icon-add_circle_outline {
   font-size: 2rem;
-  color: #ffa600;
+  color: #ffa705;
   position: absolute;
   z-index: 11;
-  top: 30px;
-  left: 3%;
+  top: 10px;
+  left: 12%;
 }
-.Parent-Raibet .formilar-addinCats {
+.paront-kalobsat .formilar-addinCats {
   font-size: 2rem;
   background-color: #267e776b;
   width: 100%;
@@ -55,34 +20,34 @@
   top: 0px;
   left: 0;
 }
-.Parent-Raibet .formilar-addinCats.activ {
+.paront-kalobsat .formilar-addinCats.activ {
   transform: scale3d(1, 1, 1);
   transition: 1s;
 }
 
-.Parent-Raibet .formilers-Rabbit {
+.paront-kalobsat .formilers-Kalobsat {
   width: 70%;
-  margin: 100px auto;
+  margin: 50px auto;
   background-color: #ffa805a1;
   border-radius: 10px;
   flex-direction: column;
   box-shadow: 1px 0px 10px 2px rgb(62, 62, 62);
   padding: 20px;
 }
-.formilers-Rabbit .icon-remove {
+.formilers-Kalobsat .icon-remove {
   color: #267e77;
   transition: 0.4s;
 }
-.formilers-Rabbit .icon-remove:hover {
+.formilers-Kalobsat .icon-remove:hover {
   color: red;
   transform: rotateX(180deg);
 }
-.formilers-Rabbit > div {
+.formilers-Kalobsat > div {
   margin-bottom: 1rem;
   width: 100%;
 }
 
-.formilers-Rabbit > input {
+.formilers-Kalobsat > input {
   all: unset;
   color: #267e77;
   border-radius: 10px;
@@ -93,7 +58,7 @@
   width: 90%;
   margin: 10px auto !important;
 }
-.formilers-Rabbit button {
+.formilers-Kalobsat button {
   all: unset;
   padding: 5px 10px;
   background-color: #267e77;
@@ -107,7 +72,7 @@
   text-align: center;
 }
 @media (max-width: 666px) {
-  .Parent-Raibet .formilers-Rabbit {
+  .paront-kalobsat .formilers-Kalobsat {
     width: 90% !important;
     margin: 50px auto;
     border-radius: 10px;
@@ -115,7 +80,7 @@
     box-shadow: 1px 0px 10px 2px rgb(133, 227, 204);
     padding: 10px 30px;
   }
-  .formilers-Rabbit button {
+  .formilers-Kalobsat button {
     width: 35%;
   }
 }

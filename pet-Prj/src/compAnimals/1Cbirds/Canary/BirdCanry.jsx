@@ -1,21 +1,21 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./kalobsat.css";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import "./canry.css";
 import { Grid, Pagination } from "swiper/modules";
 
+import FormilCanry from "../Canary/FormilCanry";
 import ButUpDawon from "../ButUpDawon";
-import FormilaKalobsat from "./FormilaKalobsat";
-import AddforKalobsat from "./AddforKalobsat";
+import AddopjCanry from "./AddopjCanry";
 
-const formilKalobsat = [];
+const formilCanare = [];
 
-export default function BirdKalobsat() {
+export default function BirdCanary() {
   const [activeItemId, setActiveItemId] = useState(null);
   const [topformil, setTopformil] = useState("");
-  const [todoKalobst, setTodokalobsat] = useState(formilKalobsat);
+  const [addTodos, setAddTodos] = useState(formilCanare);
 
   function clickUPformilCanary() {
     if (topformil == "actv") {
@@ -31,11 +31,8 @@ export default function BirdKalobsat() {
 
   return (
     <>
-      <div className="paront-kalobsat">
-        <AddforKalobsat
-          todoKalobst={todoKalobst}
-          setTodokalobsat={setTodokalobsat}
-        />
+      <div className="paron-Canray">
+        <AddopjCanry addTodos={addTodos} setAddTodos={setAddTodos} />
         <Swiper
           slidesPerView={3}
           grid={{
@@ -63,18 +60,19 @@ export default function BirdKalobsat() {
           <div className={`bak-formila-canare  ${topformil}`}>
             <ButUpDawon
               onClick={clickUPformilCanary}
-              text=" ridin about kalbosat"
+              text=" ridin about canarey"
             />
-            <FormilaKalobsat />
+            <FormilCanry />
           </div>
 
           <ButUpDawon onClick={clickUPformilCanary} />
 
-          {todoKalobst.map((item) => (
+          {addTodos.map((item) => (
             <SwiperSlide key={item.id}>
               <div
                 style={{
                   backgroundImage: `url(${item.img})`,
+                  backgroundSize: item.backgroundsize,
                 }}
                 id={item.id}
                 className={`child-canar-Div ${
@@ -91,7 +89,6 @@ export default function BirdKalobsat() {
                     <li>Teyp: {item.type}</li>
                     <li>Age: {item.Age} </li>
                   </ul>
-
                   <div className="icon-loop" />
                 </div>
               </div>
