@@ -2,8 +2,13 @@
 import { useState, useRef, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import BottnAdd from "../BottnAdd";
+// import { useContext } from "react";
+// import { Todlistcontexdogs } from "./contxdogs/ContexDogs";
+
 // eslint-disable-next-line react/prop-types, no-unused-vars
 export default function AddOpjDogs({ setTododogs, tododogs }) {
+  // const forDleteTo = useContext(Todlistcontexdogs);
+
   const [person, setPerson] = useState("");
   const [age, setAge] = useState("");
   const [title, setTille] = useState("");
@@ -59,6 +64,7 @@ export default function AddOpjDogs({ setTododogs, tododogs }) {
     setImage("");
     setType("");
   }
+
   useEffect(() => {
     const storageTodos = JSON.parse(localStorage.getItem("todoDogs")) ?? [];
     setTododogs(storageTodos);

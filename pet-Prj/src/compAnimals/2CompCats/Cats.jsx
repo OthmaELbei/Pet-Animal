@@ -20,13 +20,23 @@ export default function Cats() {
   const [activeItemId, setActiveItemId] = useState(null);
   const [todo, setTodo] = useState(JsonCats);
 
+  const handleDelete = (id) => {
+    const shouldDelete = window.confirm("Are you Whant dulet this");
+
+    if (shouldDelete) {
+      const updatedDogs = todo.filter((dog) => dog.id !== id);
+      setTodo(updatedDogs);
+      localStorage.setItem("todocat", JSON.stringify(updatedDogs));
+    }
+  };
+
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
   };
 
   return (
     <>
-      <div className="Parent-Cats position-relative">
+      <div id="scrollspyHeading2" className="Parent-Cats position-relative">
         <div className="back-content w-100 h-100 position-absolute  top-0 start-0" />
         <TitleAnimals title={"Cats"} />
         <AddOpject setTodo={setTodo} todo={todo} />
@@ -75,6 +85,10 @@ export default function Cats() {
                   <li>Tayp :{cat.six}</li>
                 </ul>
               </dir>
+              <div
+                className="icon-close1"
+                onClick={() => handleDelete(cat.id)}
+              ></div>
             </SwiperSlide>
           ))}
         </Swiper>

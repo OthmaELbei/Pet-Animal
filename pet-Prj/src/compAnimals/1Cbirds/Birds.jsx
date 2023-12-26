@@ -17,6 +17,7 @@ export default function Birds() {
   return (
     <>
       <Swiper
+        id="scrollspyHeading1"
         pagination={{
           type: "progressbar",
         }}

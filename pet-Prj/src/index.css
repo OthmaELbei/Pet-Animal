@@ -18,6 +18,15 @@ li {
   list-style: none;
 }
 
+::-webkit-scrollbar-track {
+  background: #267e76;
+  border-radius: 10px;
+}
+:-webkit-scrollbar-thumb {
+  background: #fbad04;
+  border-radius: 5px;
+}
+
 .conteiner {
   margin-left: 50px !important;
   margin-right: 50px !important;

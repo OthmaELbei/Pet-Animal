@@ -16,15 +16,9 @@ export default function AddOpject({ setTodo, todo }) {
   // add for click Botton Actv
   function addActiv() {
     if (addActv === "") {
-      // استخدم === بدلاً من ==
       setAddActv("activ");
     } else {
       setAddActv("");
-      setPerson("");
-      setAge("");
-      setTille("");
-      setImage("");
-      setType("");
     }
   }
 
@@ -43,25 +37,23 @@ export default function AddOpject({ setTodo, todo }) {
         type: type,
         img: reader.result,
       };
-      const updateTodos = [...todo, newTodos];
-      setTodo(updateTodos);
-      localStorage.setItem("todoCat", JSON.stringify(updateTodos));
+      const updateTod = [...todo, newTodos];
+      setTodo(updateTod);
+      console.log(updateTod);
+      localStorage.setItem("todocat", JSON.stringify(updateTod));
     };
 
     if (image) {
       reader.readAsDataURL(image);
     }
     setAddActv("");
-    setPerson("");
-    setAge("");
-    setTille("");
-    setImage("");
-    setType("");
   }
+
   // for useEffect
   useEffect(() => {
-    const storageTodos = JSON.parse(localStorage.getItem("todoCat")) ?? [];
-    setTodo(storageTodos);
+    const storageTods = JSON.parse(localStorage.getItem("todocat")) ?? [];
+
+    setTodo(storageTods);
   }, []);
 
   return (

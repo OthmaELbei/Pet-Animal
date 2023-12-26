@@ -1,39 +1,37 @@
 // import React from "react";s
 
-import { Link } from "react-router-dom";
 import Links from "./Links";
 
 export default function UL() {
   return (
     <>
       <Links>
-        <Link to={"/"}>
-          <a href="">all</a>
-        </Link>
+        <a className="dropdown-item" href="#scrollspyHeading1">
+          Birds
+        </a>
       </Links>
 
       <Links>
-        <Link to={"/catPaje"}>
-          <a href="">cats</a>
-        </Link>
+        <a className="dropdown-item" href="#scrollspyHeading2">
+          cats
+        </a>
       </Links>
 
       <Links>
-        <Link to={"/dogpaje"}>
-          <a href="">dogs</a>
-        </Link>
+        <a className="dropdown-item" href="#scrollspyHeading3">
+          dogs
+        </a>
       </Links>
 
       <Links>
-        <Link to={"/rabbiytPaj"}>
-          <a href="">Rappit</a>
-        </Link>
+        <a className="dropdown-item" href="#scrollspyHeading4">
+          Rabbit
+        </a>
       </Links>
-
       <Links>
-        <Link to={"/fishPaje"}>
-          <a href="">Fishs</a>
-        </Link>
+        <a className="dropdown-item" href="#scrollspyHeading5">
+          Fish
+        </a>
       </Links>
     </>
   );

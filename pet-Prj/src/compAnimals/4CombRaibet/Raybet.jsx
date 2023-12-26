@@ -22,7 +22,7 @@ export default function Raybet() {
 
   return (
     <>
-      <div className="Parent-Raibet">
+      <div className="Parent-Raibet" id="scrollspyHeading4">
         <TitleAnimals title={"Rabbits"} />
         <AddForRabbit todoRib={todoRib} setTodoRib={setTodoRib} />
         <Swiper

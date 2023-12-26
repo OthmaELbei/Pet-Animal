@@ -24,7 +24,7 @@ export default function Fishs() {
 
   return (
     <>
-      <div className="Par-fish">
+      <div className="Par-fish" id="scrollspyHeading5">
         <TitleAnimals title={"Fishs"} />
         <AddForFish todoFish={todoFish} setTodofish={setTodofish} />
         <Swiper
