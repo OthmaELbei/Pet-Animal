@@ -1,12 +1,10 @@
-/* For add icocon for formilar in kalobsat */
-
 .paront-kalobsat .icon-add_circle_outline {
   font-size: 2rem;
   color: #ffa705;
   position: absolute;
   z-index: 11;
   top: 10px;
-  left: 12%;
+  left: 1%;
 }
 .paront-kalobsat .formilar-addinCats {
   font-size: 2rem;
@@ -82,5 +80,9 @@
   }
   .formilers-Kalobsat button {
     width: 35%;
+  }
+
+  .paront-kalobsat .icon-add_circle_outline {
+    font-size: 1.3rem;
   }
 }

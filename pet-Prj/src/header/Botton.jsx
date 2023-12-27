@@ -30,13 +30,12 @@ export default function Botton() {
         <div className="yi">
           <ul style={{ position: "relative" }} className="links-ul">
             <li className="ll" style={{ margin: "10px" }}>
-              <button
+              <ClearRoundedIcon
                 onClick={() => {
                   setNone("none");
                 }}
-              >
-                <ClearRoundedIcon className=" position-absolute m-1 top-0 end-0" />
-              </button>
+                className=" position-absolute m-1 top-0 end-0"
+              />
             </li>
 
             <UL className="link-ul" />

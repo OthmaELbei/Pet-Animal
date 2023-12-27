@@ -47,7 +47,6 @@
 .Canare .child-canar-Div {
   display: flex;
   align-items: center;
-
   background-size: cover;
   height: 190px !important;
   position: relative;
@@ -179,6 +178,7 @@
 }
 .img_fod {
   display: flex;
+  flex-wrap: wrap !important;
 }
 .img_fod img {
   flex-basis: 20%;
@@ -222,3 +222,10 @@
   }
 }
 
+/* Meidei for button  */
+
+@media (max-width: 666px) {
+  .Canare .Buttfromila-canry {
+    left: 30%;
+  }
+}

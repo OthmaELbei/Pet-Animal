@@ -25,6 +25,16 @@ export default function BirdCanary() {
     }
   }
 
+  const handleDelete = (id) => {
+    const shouldDelete = window.confirm("Are you Whant dulet this");
+
+    if (shouldDelete) {
+      const updatedDogs = addTodos.filter((dog) => dog.id !== id);
+      setAddTodos(updatedDogs);
+      localStorage.setItem("todoCanry", JSON.stringify(updatedDogs));
+    }
+  };
+
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
   };
@@ -83,9 +93,14 @@ export default function BirdCanary() {
                 <div className="icon-loop" />
 
                 <div className="other-face">
-                  <h6>{item.person}</h6>
-                  <h6>{item.telle}</h6>
+                  <div
+                    className="icon-close1"
+                    onClick={() => handleDelete(item.id)}
+                  ></div>
+
                   <ul>
+                    <li>All Name: {item.person} </li>
+                    <li>Tile: {item.telle} </li>
                     <li>Teyp: {item.type}</li>
                     <li>Age: {item.Age} </li>
                   </ul>

@@ -19,6 +19,11 @@ export default function AddOpject({ setTodo, todo }) {
       setAddActv("activ");
     } else {
       setAddActv("");
+      setPerson("");
+      setAge("");
+      setTille("");
+      setImage("");
+      setType("");
     }
   }
 
@@ -47,6 +52,11 @@ export default function AddOpject({ setTodo, todo }) {
       reader.readAsDataURL(image);
     }
     setAddActv("");
+    setPerson("");
+    setAge("");
+    setTille("");
+    setImage("");
+    setType("");
   }
 
   // for useEffect

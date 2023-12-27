@@ -46,9 +46,9 @@ li {
 
 .titAlls {
   text-align: center;
-  color: transparent;
+  color: #fbad04;
   /* color: #8f0000; */
-  font-size: 70px;
+  font-size: 80px;
   letter-spacing: 10px;
   display: flex;
   align-items: center;
@@ -57,9 +57,9 @@ li {
   width: 0px;
   height: 70px;
   transition: 0.5s;
-  font-weight: 800;
-  background-color: transparent;
-  transform: translateY(60%);
+  font-weight: 900;
+
+  transform: translateY(80%);
   position: absolute;
   z-index: 10;
   cursor: pointer;
@@ -67,7 +67,7 @@ li {
   left: 50%;
 
   text-transform: capitalize;
-  text-shadow: 10px 10px 3px #fbad04;
+  text-shadow: 7px 6px 5px #cff8f4;
 }
 
 .titAlls:hover {
@@ -130,4 +130,22 @@ li {
   margin-bottom: 10px;
   top: 100px;
   padding: 0 20px;
+}
+@media (max-width: 666px) {
+  .stity.activ {
+    width: 60%;
+    transition: 0.4s;
+  }
+  .stity {
+    top: 5%;
+  }
+}
+@media (min-width: 666px) {
+  .stity.activ {
+    width: 30%;
+    transition: 0.4s;
+  }
+  .stity {
+    top: 5%;
+  }
 }

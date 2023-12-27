@@ -1,119 +1,22 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Grid, Pagination } from "swiper/modules";
+import ButUpDawon from "../ButUpDawon";
+import FormilarMondran from "./FormilarMondran";
+import AddopjMandran from "./AddopjMandran";
+
+//  import for CSS
 import "./mondran.css";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Grid, Pagination } from "swiper/modules";
-import { v4 as uuidv4 } from "uuid";
-import ButUpDawon from "../ButUpDawon";
 
-import FormilarMondran from "./FormilarMondran";
-import AddopjMandran from "./AddopjMandran";
-
-const formilCanare = [
-  {
-    id: uuidv4(),
-    transform: "",
-    backgroundimage: "url('/public/Mond-bird1.jpg')",
-    backgroundsize: "cover ",
-    AllName: "ahmed Arar",
-    Namber: "+273678890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform: "",
-    backgroundimage: "url('/public/Mond-bird2.jpg')",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+45678900",
-    Tayp: "CANYR",
-    jender: "MAHLE",
-    prex: "222£",
-    City: "Raba",
-  },
-  {
-    id: uuidv4(),
-    transform: "",
-    backgroundimage: "url('/public/Mond-bird3.jpg')",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform: "",
-    backgroundimage: "url('/public/Mond-bird4.jpg')",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('/public/Mond-bird5.jpg')",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('/public/Mond-bird6.jpg')",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('/public/Mond-bird7.webp')",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-  {
-    id: uuidv4(),
-    transform1: "",
-    backgroundimage: "url('/public/Mond-bird8.jpg')",
-    backgroundsize: "cover ",
-    AllName: "ahmed taha",
-    Namber: "+3234567890",
-    Tayp: "CANR",
-    jender: "MALE",
-    prex: "22£",
-    City: "CASA",
-  },
-];
+const formilMondran = [];
 
 export default function BirdMondran() {
   const [activeItemId, setActiveItemId] = useState(null);
   const [topformil, setTopformil] = useState("");
-  const [addMandrn, setAddMandrn] = useState(formilCanare);
+  const [addMandrn, setAddMandrn] = useState(formilMondran);
 
   function clickUPformilCanary() {
     if (topformil == "actv") {
@@ -122,6 +25,16 @@ export default function BirdMondran() {
       setTopformil("actv");
     }
   }
+
+  const handleDelete = (id) => {
+    const shouldDelete = window.confirm("Are you Whant dulet this");
+
+    if (shouldDelete) {
+      const updatedDogs = addMandrn.filter((dog) => dog.id !== id);
+      setAddMandrn(updatedDogs);
+      localStorage.setItem("todoLsansbrabil", JSON.stringify(updatedDogs));
+    }
+  };
 
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
@@ -180,9 +93,14 @@ export default function BirdMondran() {
                 <div className="icon-loop" />
 
                 <div className="other-face">
-                  <h6>{item.person}</h6>
-                  <h6>{item.telle}</h6>
+                  <div
+                    className="icon-close1"
+                    onClick={() => handleDelete(item.id)}
+                  ></div>
+
                   <ul>
+                    <li>All Name: {item.person} </li>
+                    <li>Tile: {item.telle} </li>
                     <li>Teyp: {item.type}</li>
                     <li>Age: {item.Age} </li>
                   </ul>

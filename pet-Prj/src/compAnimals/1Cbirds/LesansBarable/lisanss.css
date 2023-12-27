@@ -6,7 +6,7 @@
   position: absolute;
   z-index: 11;
   top: 10px;
-  left: 12%;
+  left: 1%;
 }
 .paront-lsans .formilar-addinCats {
   font-size: 2rem;
@@ -82,5 +82,8 @@
   }
   .formilers-lsanss button {
     width: 35%;
+  }
+  .paront-lsans .icon-add_circle_outline {
+    font-size: 1.3rem;
   }
 }

@@ -4,7 +4,7 @@
   position: absolute;
   z-index: 11;
   top: 10px;
-  left: 12%;
+  left: 1%;
 }
 .paren-mondran .formilar-addinCats {
   font-size: 2rem;
@@ -80,5 +80,8 @@
   }
   .formilers-Maondran button {
     width: 35%;
+  }
+  .paren-mondran .icon-add_circle_outline {
+    font-size: 1.3rem;
   }
 }

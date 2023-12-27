@@ -7,16 +7,15 @@
   overflow: hidden;
 }
 
-/* back grond clasName back-content */
 .Parent-Cats .back-content {
   z-index: 1;
   background: radial-gradient(
     circle at 80%,
-    #ec9c35dd,
-    #edbc80a3 25%,
-    #f9d3a59b 65%,
-    #ec9c35dd 16%,
-    #eb9d58a3 100%
+    #f8f8f8dd,
+    #c3c3c3a3 25%,
+    #a5f9e39b 65%,
+    #ffffffdd 16%,
+    #267e7791 100%
   );
   background-color: #267e7746;
 }
@@ -25,7 +24,7 @@
 .Parent-Cats .Pr-cats .Box-Cat {
   height: 400px;
   transform: scale(0.3, 0.3);
-  background-color: wheat;
+  background-color: rgba(250, 236, 211, 0.962);
   z-index: -1;
   border-radius: 10px;
   transition: 0.6s;
@@ -55,31 +54,10 @@
   transition: 0.6s;
 }
 
-/* meida for md sm  */
-@media (min-width: 576px) {
-  .Parent-Cats .Pr-cats .Box-Cat {
-    height: 250px;
-  }
-}
-
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .Parent-Cats .Pr-cats .Box-Cat {
-    height: 350px;
-  }
-}
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .Parent-Cats .Pr-cats .Box-Cat {
-    height: 380px;
-  }
-}
-
 /* For add icocon for formilar in cats */
 .Parent-Cats .icon-add_circle_outline {
   font-size: 2.5rem;
-  color: #267e77;
+  color: #ffffff;
   position: absolute;
   z-index: 11;
   top: 30px;
@@ -149,7 +127,26 @@
   /* flex-basis: 46%; */
   text-align: center;
 }
-@media (max-width: 666px) {
+
+.Box-Cat .icon-close1 {
+  position: absolute;
+  background-color: rgb(201, 197, 197);
+  width: 10px;
+  height: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  right: -00px;
+  color: red;
+  font-size: 1rem;
+  border-radius: 50%;
+}
+
+/* medie for -667px */
+
+@media (max-width: 667px) {
   .Parent-Cats .formilers-cats {
     width: 90% !important;
     margin: 50px auto;
@@ -160,5 +157,30 @@
   }
   .formilers-cats button {
     width: 35%;
+  }
+
+  .Parent-Cats .icon-add_circle_outline {
+    font-size: 1.5rem;
+  }
+}
+
+/* meida for md sm  */
+@media (min-width: 576px) {
+  .Parent-Cats .Pr-cats .Box-Cat {
+    height: 250px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .Parent-Cats .Pr-cats .Box-Cat {
+    height: 350px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .Parent-Cats .Pr-cats .Box-Cat {
+    height: 380px;
   }
 }

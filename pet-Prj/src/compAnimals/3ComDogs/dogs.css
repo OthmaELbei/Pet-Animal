@@ -2,18 +2,17 @@
   margin: 0;
   padding-top: 160px;
   min-height: 600px;
-
   background: radial-gradient(
-    circle at 80%,
-    #ec9c35dd,
-    #edbc80a3 30%,
-    #f9d3a59b 70%,
-    #ec9c35dd 100%,
-    #eb9d58a3 70%
+    circle at 90%,
+    #ffcc89fd,
+    #c3c3c3 25%,
+    #00322e8d,
+    #048b80 100%
   );
   position: relative;
   overflow: hidden;
 }
+
 .box-imag img {
   border-radius: 10px;
   z-index: 9;
@@ -28,6 +27,7 @@
   flex-basis: 100%;
   transition: 0.5s;
 }
+/* in add class activ */
 .box-imag img.activ {
   width: 100px;
   transition: 1s;
@@ -40,14 +40,16 @@
   margin-top: 50px;
   margin-bottom: 60px;
 }
+
 .box-dog {
   width: 300px !important;
   height: 340px !important;
   background-color: transparent;
-  color: #048b80;
+  color: #303030;
   text-align: center;
   padding: 10px;
   z-index: -1;
+  font-weight: 700;
   position: absolute;
   top: 10%;
   left: 50px;
@@ -58,10 +60,10 @@
 /* For add icocon for formilar in cats */
 .parent-Dogs .icon-add_circle_outline {
   font-size: 2rem;
-  color: #267e77;
+  color: #f7f7f7;
   position: absolute;
   z-index: 11;
-  top: 10px;
+  top: 25px;
   left: 3%;
 }
 .parent-Dogs .formilar-addinCats {
@@ -127,21 +129,7 @@
   text-align: center;
 }
 
-@media (max-width: 666px) {
-  .parent-Dogs .formilers-dos {
-    width: 90% !important;
-    margin: 50px auto;
-    border-radius: 10px;
-    flex-direction: column;
-    box-shadow: 1px 0px 10px 2px rgb(133, 227, 204);
-    padding: 10px 30px;
-  }
-  .formilers-dos button {
-    width: 35%;
-  }
-}
-
-.icon-close1 {
+.box-dog .icon-close1 {
   position: absolute;
   background-color: rgb(201, 197, 197);
   width: 10px;
@@ -156,26 +144,21 @@
   font-size: 1rem;
   border-radius: 50%;
 }
-.rimovs {
-  position: absolute;
-  top: 50%;
-  z-index: 23456;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20%;
-  height: 40%;
-  background-color: #ffffff;
-  border: 2px solid #674302;
-  border-radius: 10px;
-  text-align: center;
-  padding: 30px 10px;
-  color: #267e77;
-}
-.rimovs button {
-  color: #674302;
-  padding: 10px 20px;
-  border-radius: 14px;
-  margin-left: 15px;
-  background-color: #fdd997;
-  border: none;
+
+/* medei for 666px */
+@media (max-width: 666px) {
+  .parent-Dogs .formilers-dos {
+    width: 90% !important;
+    margin: 50px auto;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 1px 0px 10px 2px rgb(133, 227, 204);
+    padding: 10px 30px;
+  }
+  .formilers-dos button {
+    width: 35%;
+  }
+  .parent-Dogs .icon-add_circle_outline {
+    font-size: 1.5rem;
+  }
 }

@@ -14,12 +14,13 @@
   box-shadow: rgba(38, 126, 118, 0.74) 127px 34px 66px -42px inset;
 }
 
-.links-ul li a {
-  color: var(--pramerey-color);
+.links-ul li .link {
+  color: #267e76 !important;
+  cursor: pointer;
 }
 
-.links-ul li a:hover {
-  color: var(--cecandery-color);
+.links-ul li .link:hover {
+  color: #ff9900 !important;
 }
 
 /*  -2- booten  componebt Botten */
@@ -34,7 +35,7 @@
 }
 
 .Naveclobs {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #0c2b2850;
   position: absolute;
@@ -75,11 +76,11 @@
   position: relative;
 }
 
-.Naveclobs .yi ul li a {
+.Naveclobs .yi ul li .link {
   color: #267e76;
   /* background-color: #267e76; */
 }
-.Naveclobs .yi ul li a:hover {
+.Naveclobs .yi ul li .link:hover {
   color: #ff9900;
 }
 .Naveclobs .yi ul li:hover:before {
@@ -93,7 +94,7 @@
   background-color: #267e7765;
   color: #ff9900;
   z-index: -2;
-  box-shadow: 0px 2px 20px -1px #ff9900;
+  /* box-shadow: 0px 2px 20px -1px #ff9900; */
 }
 
 /* medei for header */

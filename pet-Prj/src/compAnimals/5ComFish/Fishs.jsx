@@ -15,8 +15,17 @@ const formilFishs = [];
 
 export default function Fishs() {
   const [activeItemId, setActiveItemId] = useState(null);
-
   const [todoFish, setTodofish] = useState(formilFishs);
+
+  const handleDelete = (id) => {
+    const shouldDelete = window.confirm("Are you Whant dulet this");
+
+    if (shouldDelete) {
+      const updatedDogs = todoFish.filter((dog) => dog.id !== id);
+      setTodofish(updatedDogs);
+      localStorage.setItem("todoFish", JSON.stringify(updatedDogs));
+    }
+  };
 
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
@@ -62,11 +71,16 @@ export default function Fishs() {
                 >
                   <img src={fish.img} alt="" />
 
-                  <div>
+                  <div className="box-fish">
+                    <div
+                      className="icon-close1"
+                      onClick={() => handleDelete(fish.id)}
+                    ></div>
                     <ul>
-                      <li>Name :{fish.AllName}</li>
-                      <li>Namber :{fish.Namber}</li>
-                      <li>AGe : {fish.Tayp}</li>
+                      <li>Name :{fish.person}</li>
+                      <li>Namber :{fish.telle}</li>
+                      <li>Type : {fish.type}</li>
+                      <li>Age : {fish.Age}</li>
                     </ul>
                   </div>
                 </div>

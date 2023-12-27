@@ -1,3 +1,4 @@
+import IconNav from "../navPet/IconNav";
 import "./footer.css";
 export default function Foter() {
   return (
@@ -6,6 +7,7 @@ export default function Foter() {
         <div className="title-Fotter">
           <h1>Pet Animals</h1>
           <h5>Pet-ANimal@gmail.com</h5>
+          <IconNav />
         </div>
       </div>
     </>

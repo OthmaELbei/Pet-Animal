@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Grid, Pagination } from "swiper/modules";
+import ButUpDawon from "../ButUpDawon";
+import FormilaKalobsat from "./FormilaKalobsat";
+import AddforKalobsat from "./AddforKalobsat";
+
+// for import css
 import "./kalobsat.css";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Grid, Pagination } from "swiper/modules";
-
-import ButUpDawon from "../ButUpDawon";
-import FormilaKalobsat from "./FormilaKalobsat";
-import AddforKalobsat from "./AddforKalobsat";
 
 const formilKalobsat = [];
 
@@ -24,6 +25,16 @@ export default function BirdKalobsat() {
       setTopformil("actv");
     }
   }
+
+  const handleDelete = (id) => {
+    const shouldDelete = window.confirm("Are you Whant dulet this");
+
+    if (shouldDelete) {
+      const updatedDogs = todoKalobst.filter((dog) => dog.id !== id);
+      setTodokalobsat(updatedDogs);
+      localStorage.setItem("todoKalobsat", JSON.stringify(updatedDogs));
+    }
+  };
 
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
@@ -85,9 +96,14 @@ export default function BirdKalobsat() {
                 <div className="icon-loop" />
 
                 <div className="other-face">
-                  <h6>{item.person}</h6>
-                  <h6>{item.telle}</h6>
+                  <div
+                    className="icon-close1"
+                    onClick={() => handleDelete(item.id)}
+                  ></div>
+
                   <ul>
+                    <li>All Name: {item.person} </li>
+                    <li>Tile: {item.telle} </li>
                     <li>Teyp: {item.type}</li>
                     <li>Age: {item.Age} </li>
                   </ul>

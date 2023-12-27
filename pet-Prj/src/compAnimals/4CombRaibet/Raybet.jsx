@@ -16,6 +16,16 @@ export default function Raybet() {
   const [activeItemId, setActiveItemId] = useState(null);
   const [todoRib, setTodoRib] = useState(formilRaibit);
 
+  const handleDelete = (id) => {
+    const shouldDelete = window.confirm("Are you Whant dulet this");
+
+    if (shouldDelete) {
+      const updatedDogs = todoRib.filter((dog) => dog.id !== id);
+      setTodoRib(updatedDogs);
+      localStorage.setItem("todoRaibit", JSON.stringify(updatedDogs));
+    }
+  };
+
   const handleItemClick = (id) => {
     setActiveItemId((prevId) => (prevId === id ? null : id));
   };
@@ -51,7 +61,7 @@ export default function Raybet() {
         >
           {todoRib.map((item) => (
             <SwiperSlide key={item.id}>
-              <div id={item.id} className={`child-Raybit-Div `}>
+              <div id={item.id} className="child-Raybit-Div">
                 <div
                   onClick={() => handleItemClick(item.id)}
                   className={`imag-raibit ${
@@ -60,12 +70,17 @@ export default function Raybet() {
                 >
                   <img src={item.img} alt="" />
 
-                  <div>
+                  <div className="box-rabit">
                     <ul>
-                      <li>Name :{item.AllName}</li>
-                      <li>Namber :{item.Namber}</li>
-                      <li>AGe : {item.Tayp}</li>
+                      <li>Name :{item.person}</li>
+                      <li>Namber :{item.telle}</li>
+                      <li> type : {item.type}</li>
+                      <li> Age : {item.Age}</li>
                     </ul>
+                    <div
+                      className="icon-close1"
+                      onClick={() => handleDelete(item.id)}
+                    ></div>
                   </div>
                 </div>
               </div>
